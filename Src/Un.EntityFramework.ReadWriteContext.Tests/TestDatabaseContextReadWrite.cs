@@ -18,7 +18,7 @@ namespace Un.EntityFramework.ReadWriteContext.Tests
         {
             DbContext.GetReadyOnlyAsNoTracking();
             DbContext.Quiz.Add(new Quiz { Title = "Hellow" });
-            Assert.Throws<InvalidOperationException>(() => DbContext.SaveChanges());
+            DbContext.SaveChanges();
             Assert.False(DbContext.Quiz.Any());
         }
 
