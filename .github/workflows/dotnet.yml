@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build Src/Un.EntityFramework.ReadWriteContext.sln --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test Src/Un.EntityFramework.ReadWriteContext.Tests/Un.EntityFramework.ReadWriteContext.Tests.csproj --no-build --verbosity normal
